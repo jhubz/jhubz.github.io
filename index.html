@@ -3,14 +3,158 @@
 	
 	<head>	
 		<meta charset="utf-8">
-		<title>Портфолио</title>
+		<title>Суходолов Александр - Портфолио</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
 	</head>
 	
 	<body>
-		<h1>Список проектов</h1>
-		<ul>
-			<li><a href="gllacy/index.html">Магазин мороженого Gllacy</a></li>
-		</ul>
+	
+		<header class="site-header" id="top-header">
+			<div class="content-container">
+				
+				<nav class="site-navigation">
+					<div class="mobile-nav-btn"></div>
+					<span class="mobile-menu-item-copy">Обо мне</span>
+					<ul class="desktop-menu mobile-menu" id="top-menu">
+						<li class="about-me-btn active"><a href="#about-me-id">Обо мне</a></li>
+						<li class="my-skills-btn"><a href="#my-skills-id">Мои навыки</a></li>
+						<li class="my-works-btn"><a href="#my-works-id">Мои работы</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		
+		<div class="main">
+		
+				<section class="about-me" id="about-me-id">
+				
+					<div class="content-container">
+					
+						<h2>Добро пожаловать!</h2>
+						<p>
+							Меня зовут Александр. Я занимаюсь вёрсткой сайтов.
+						</p>
+						<p>
+							Верстаю по макетам с нуля, а также провожу изменение уже написанного кода.
+						</p>
+						<p>
+							Пишу валидный, аккуратный и читабельный код. Вёрстка полностью соответствует макету.
+						</p>
+						
+					</div>
+					
+				</section>
+				
+				
+					
+				<section class="my-skills clearfix" id="my-skills-id">
+				
+					<div class="content-container">
+					
+						<h2>Мои навыки</h2>
+						<ul>
+							<li>HTML5</li>
+							<li>CSS3</li>
+							<li>Кроссбраузерность</li>
+							<li>Адаптивная вёрстка</li>
+						</ul>
+						
+					</div>
+					
+				</section>
+				
+					
+				
+				<section class="my-works clearfix" id="my-works-id">
+				
+					<div class="content-container">
+					
+						<h2>Мои работы</h2>
+						<ul>
+						
+							<li>
+								<a href="works/gllacy/index.html">
+									<div class="image-container">
+										<img class="work-image" src="img/gllacy.jpg" width="300" height="300" alt="">
+										<p class="work-title">
+											"Базовый HTML и CSS"<br>
+											Май 2016г.
+											<span>htmlacademy.ru</span>
+										</p>
+										<p class="work-description">Интернет-магазин мороженого Gllacy</p>
+									</div>
+								</a>
+							</li>
+							
+							<li>
+								<a href="works/adventurer/index.html">
+									<div class="image-container">
+										<img class="work-image" src="img/adventurer.jpg" width="300" height="300" alt="">
+										<p class="work-title">
+											Вёрстка по макету
+											<span>Adventurer</span>
+										</p>
+										<p class="work-description">Лендинг-страница Adventurer</p>
+									</div>
+								</a>
+							</li>	
+
+							<li>
+								<a href="http://www.kosmostom.ru">
+									<div class="image-container">
+										<img class="work-image" src="img/kosmostom.jpg" width="300" height="300" alt="">
+										<p class="work-title">
+											Небольшие доработки сайта
+											<span>kosmostom.ru</span>
+										</p>
+										<p class="work-description">Адаптивный блок</p>
+									</div>
+								</a>
+							</li>
+							
+						</ul>
+						
+					</div>
+						
+				</section>
+				
+			
+		</div>
+		
+		<footer class="site-footer">
+		
+			<div class="content-container">
+			
+				<section class="my-contacts">
+					<h3>Мои контакты</h3>
+					<ul>
+						<li>
+							<span class="contact-title">Электронная почта</span>
+							<span class="contact-content">jhubz@list.ru</span>
+						</li>
+						<li>
+							<span class="contact-title">Телефон</span>
+							<span class="contact-content">8-929-667-92-50</span>
+						</li>
+						<li class="social">
+							<a class="vkontakte" href="http://www.vk.com">Вконтакте</a>
+						</li>
+					</ul>
+				</section>
+				
+			</div>
+			
+		</footer>
+		
+		<div class="up-button">
+			<a href="#about-me-id"></a>
+		</div>
+		
+		<script src="js/jquery-3.1.0.min.js"></script>
+		<script src="js/script.js"></script>
+
 	</body>
 	
 </html>
