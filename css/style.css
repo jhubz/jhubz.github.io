@@ -100,7 +100,9 @@
 
 
 
-
+*:focus {
+	outline: none;
+}
 
 html {
 	font: 100% / 1.5em sans-serif;
@@ -141,7 +143,7 @@ h3 {
 	font-size: 1.5em;
 	letter-spacing: 2px;
 	
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
 }
 
 .clearfix::after {
@@ -336,22 +338,28 @@ h3 {
 }
 
 .my-skills ul {
-	list-style: none;
+	/*display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-around;*/
 	padding: 0;
+	
+	list-style: none;
 }
 
 .my-skills li{
 	float: left;
 	width: 30%;
 	margin-right: 3%;
-	margin-bottom: 35px;
+	/*flex-basis: 30%;*/
+	margin-bottom: 3%;
 	padding: 20px;
+	box-sizing: border-box;
 	
 	font-size: 1.5em;
 	
 	border-radius: 20px;
-	box-sizing: border-box;
-	box-shadow: 0px 0px 30px 3px #128d58;
+	border: 3px solid #128d58;
 	background: #eee;
 	color: #000;
 }
@@ -374,6 +382,10 @@ h3 {
 }
 
 .my-works ul {
+	/*display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-around;*/
 	margin: 0;
 	padding: 0;
 	
@@ -384,7 +396,8 @@ h3 {
 	float: left;
 	width: 30%;
 	margin-right: 3%;
-	margin-bottom: 30px;
+	/*flex-basis: 30%;*/
+	margin-bottom: 3%;
 	box-sizing: border-box;
 }
 
@@ -493,77 +506,130 @@ h3 {
 	
 	transition: all 0.4s;
 }
-/*
-.my-works p.work-title a:hover {
-	color: #fff;
-	background-color: #128d58;
-	box-shadow: inset 0 0 10px 3px #000;
+
+/*--------------MY-CONTACTS-------------------*/
+
+.my-contacts {
+	padding: 80px 0 180px 0;
+	
+	text-align: center;
+	
+	background: #fff;
+	color: #000;
 }
-*/
+
+.feedback {
+	padding: 0 20%;
+	
+	text-align: center;
+}
+
+.feedback h3 {
+	margin-bottom: 60px;
+}
+
+.feedback-input {
+	padding: 10px 20px;
+	margin-bottom: 25px;
+	width: 80%;
+	
+	border-radius: 10px;
+	border: none;
+	box-shadow: 0 0 0px 1px #aaa;
+	
+	-webkit-transition: all 0.3s;
+	
+	transition: all 0.3s;
+}
+
+.feedback-input:hover {
+	box-shadow: 0 0 2px 1px #128d58;
+}
+
+.feedback-input:focus {
+	box-shadow: 0 0 5px 2px #30e899;
+	box-shadow: 0 0 5px 2px #128d58;
+}
+
+.feedback textarea {
+	margin-bottom: 35px;
+	
+	resize: none;
+}
+
+.feedback input[type="submit"] {
+	padding: 10px 20px;
+	
+	border-radius: 10px;
+	border: none;
+	background: #128d58;
+	color: #fff;
+	cursor: pointer;
+	
+	-webkit-transition: 0.4s all;
+	
+	transition: 0.4s all;
+}
+
+.feedback input[type="submit"]:hover,
+.feedback input[type="submit"]:focus {
+	background: #fff;
+	color: #128d58;
+	box-shadow: inset 0 0 0px 3px #128d58;
+}
+
 /*--------------------------------------------------------------------------*/
 
 /*----------------------------SITE-FOOTER--------------------------------*/
 
 .site-footer {
-	width: 100%;
-	padding-top: 40px;
 	padding-bottom: 40px;
+	
+	text-align: center;
 	
 	background: #000;
 	color: #fff;
 }
 
-.my-contacts h3 {
-	margin: 0 0 30px 0;
+.social-buttons {
+	
 }
-
-.my-contacts ul {
-	padding: 0 0 20px 0;
+	
+.social-buttons ul {
+	display: inline-block;
+	
 	margin: 0;
+	padding: 40px 0 20px 0;
 	
 	list-style: none;
 }
 
-.my-contacts li {
-	position: relative;
+.social-btn {
+	float: left;
 	
-	margin-top: 25px;
+	margin: 0 auto;
 }
 
-.my-contacts li a {
-	display: inline-block;
-	padding: 10px;
-	
-	text-decoration: none;
-	vertical-align: middle;
-	text-align: center;
-	
-	color: #fff;
-	background: #128d58;
-	
-	-webkit-transition: all 0.4s;
-	
-	transition: all 0.4s;
-}
-
-.my-contacts li a:hover {
-	box-shadow: 0 0 10px 3px #fff;
-}
-
-.my-contacts li .contact-title {
-	display: inline-block;
-	
-	color: #1ac27a;
-}
-
-.my-contacts li .contact-content {
+.social-btn a {
 	display: block;
+	width: 50px;
+	height: 50px;
 	
-	font-size: 1.3em;
+	font-size: 0;
+	
+	border-radius: 50%;
+	
+	-webkit-transition: 0.4s all;
+	
+	transition: 0.4s all;
 }
 
-.my-contacts li.social a.vkontakte {
-	background-color: #45668e;
+.social-btn a:hover {
+	box-shadow: inset 0 0 0 3px #fff;
+}
+
+.social-btn-vk a {
+	background: #4d75a3 url(../img/icons/vk.png) center no-repeat;
 }
 
 /*--------------------------------------------------------------------------*/
@@ -574,7 +640,7 @@ h3 {
 
 .up-button {
 	position: fixed;
-	bottom: 30px;
+	bottom: 40px;
 	right: -1000px;
 	z-index: 1000;
 	
@@ -649,6 +715,9 @@ h3 {
 	.my-skills li {
 		width: 47%;
 		margin-right: 6%;
+		/*flex-basis: 40%;*/
+		
+		margin-bottom: 5%;
 	}
 	
 	.my-skills li:nth-child(2n) {
@@ -664,6 +733,9 @@ h3 {
 	.my-works li {
 		width: 47%;
 		margin-right: 6%;
+		/*flex-basis: 40%;*/
+		
+		margin-bottom: 7%;
 	}
 	
 	.my-works li:nth-child(2n) {
@@ -673,7 +745,6 @@ h3 {
 	.my-works li:nth-child(3n) {
 		margin-right: 6%;
 	}
-
 }
 
 /*---------------------------------------------------768px---------------------------*/
@@ -700,21 +771,21 @@ h3 {
 	
 	.about-me {
 		padding: 0;
-		padding-bottom: 40px;
+		padding-bottom: 80px;
 	}
 	
 	
 	
 	.my-skills {
 		padding: 0;
-		padding-bottom: 40px;
+		padding-bottom: 80px;
 	}
 	
 	
 	
 	.my-works {
 		padding: 0;
-		padding-bottom: 40px;
+		padding-bottom: 80px;
 	}
 	
 	.my-works .image-container p {
@@ -725,11 +796,7 @@ h3 {
 		opacity: 1;
 	}
 	
-	.my-works p.work-title a {
-		margin: 10px 10px 0 10px;
-	}
-	
-	/*Удаление анимации из моих работ*/
+	/*---------------Удаление анимации из моих работ------------------*/
 	
 	.my-works a .image-container {
 		box-shadow: 0px 0px 10px 5px #666;
@@ -760,24 +827,40 @@ h3 {
 	}
 	
 	.my-works p.work-title span {
-		margin: 10px 45px;
+		margin: 10px 20px;
 		padding: 5px;
-		
-		/*box-shadow: 0 3px 5px 1px #000;*/
 	}
-
-	/*------------------------------------------*/
+	
+	/*-------------------------------------------------------------------------------*/
+	
+	
+	
+	
+	.my-contacts {
+		padding: 0;
+		padding-bottom: 80px;
+	}
+	
+	.feedback {
+		padding: 0 10%;
+	}
+	
+	
+	
+	.social-btn a {
+		box-shadow: inset 0 0 0 3px #fff;
+	}
 	
 	
 	
 	.up-button {
-		bottom: 20px;
+		bottom: 30px;
 		
-		opacity: 1;
+		opacity: 0.4;
 	}
 
 	.up-button:hover {
-		opacity: 1;
+		opacity: 0.4;
 	}
 	
 }
@@ -842,6 +925,9 @@ h3 {
 		width: 85%;
 		margin: 0 auto;
 		margin-bottom: 40px;
+		/*flex-basis: 85%;*/
+		
+		margin-bottom: 7%;
 	}
 	
 	.my-skills li:nth-child(2n) {
@@ -861,6 +947,9 @@ h3 {
 		width: 85%;
 		margin: 0 auto;
 		margin-bottom: 40px;
+		/*flex-basis: 85%;*/
+		
+		margin-bottom: 15%;
 	}
 	
 	.my-works li:nth-child(2n) {
@@ -872,6 +961,27 @@ h3 {
 		margin: 0 auto;
 		margin-bottom: 40px;
 	}
+	
+	
+	
+	.feedback {
+		padding: 0 5%;
+	}
+	
+}
+
+/*--------------------------------------------------------------------------*/
+
+/*----------------------------------------480px---------------------------*/
+
+@media screen and (max-width: 480px) {
+
+	.site-footer {
+		padding-left: 5%;
+		
+		text-align: left;
+	}
+
 }
 
 /*--------------------------------------------------------------------------*/

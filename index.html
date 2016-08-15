@@ -21,6 +21,7 @@
 						<li class="about-me-btn active"><a href="#about-me-id">Обо мне</a></li>
 						<li class="my-skills-btn"><a href="#my-skills-id">Мои навыки</a></li>
 						<li class="my-works-btn"><a href="#my-works-id">Мои работы</a></li>
+						<li class="my-contacts-btn"><a href="#my-contacts-id">Мои контакты</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -120,30 +121,55 @@
 						
 				</section>
 				
+				
+				
+				<section class="my-contacts" id="my-contacts-id">
+				
+					<div class="content-container">
+			
+						<h2>Мои контакты</h2>
+				
+						<div class="feedback">
+							
+							<h3>Напишите мне</h3>
+							
+							<form action="https://formspree.io/jhubz-work@list.ru" method="POST">
+								<input type="text" class="feedback-input" name="name" id="name-id" placeholder="Ваше имя" required>
+								<input type="email" class="feedback-input" name="email" id="email-id" placeholder="Ваша почта" required>
+								<textarea class="feedback-input" name="text" id="text-id" rows="6" cols="40" placeholder="Ваше сообщение&hellip;" required></textarea>
+								
+								<!--<input type="hidden" name="_next" value="/*Вставить адрес страницы, на которую ссылается submit*/">-->
+								<input type="hidden" name="_subject" value="Письмо из портфолио!">
+								<input type="hidden" name="_gotcha" style="display:none">
+								
+								<input type="submit" value="Отправить">
+							</form>
+							
+						</div>
+					
+					</div>
+					
+				</section>
+				
 			
 		</div>
 		
-		<footer class="site-footer">
+		<footer class="site-footer clearfix">
 		
 			<div class="content-container">
-			
-				<section class="my-contacts">
-					<h3>Мои контакты</h3>
-					<ul>
-						<li>
-							<span class="contact-title">Электронная почта</span>
-							<span class="contact-content">jhubz@list.ru</span>
-						</li>
-						<li>
-							<span class="contact-title">Телефон</span>
-							<span class="contact-content">8-929-667-92-50</span>
-						</li>
-						<li class="social">
-							<a class="vkontakte" href="http://www.vk.com">Вконтакте</a>
+
+				<div class="social-buttons">
+					<ul class="clearfix">
+						<li class="social-btn social-btn-vk">
+							<a href="http://www.vk.com/id84606">Вконтакте</a>
 						</li>
 					</ul>
-				</section>
+				</div>
 				
+				<div class="copyright">
+					<div class="copyright-text">&copy; 2016 Suhodolov Aleksandr</div>
+				</div>
+			
 			</div>
 			
 		</footer>
