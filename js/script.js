@@ -40,8 +40,15 @@ mobileMenuButton.addEventListener("click", function (event) {
 	{
 		mobileMenu.classList.remove("mobile-menu-opened");
 		mobileMenu.classList.add("mobile-menu-closed");
-		mobileMenu.classList.remove("mobile-menu-show");
+		
+		/*mobileMenu.classList.remove("mobile-menu-show");*/
+		//Без !important стили не задаются
+		mobileMenu.style.visibility = "hidden";
+		mobileMenu.style.opacity = "0";
+		
 		mobileMenuButton.classList.remove("mobile-nav-btn-active");
+		//Без !important стиль не задается
+		mobileMenuButton.style.top = "0";
 		mobileMenuButtonActive = false;
 		
 		$("#about-me-id").stop().animate({ 
@@ -54,10 +61,18 @@ mobileMenuButton.addEventListener("click", function (event) {
 	else if 	(mobileMenu.classList.contains("mobile-menu-closed") ||
 				(mobileMenu.classList.contains("mobile-menu")))
 	{
-		mobileMenu.classList.add("mobile-menu-show");
+		/*mobileMenu.classList.add("mobile-menu-show");*/
+		//Без !important стили не задаются
+		mobileMenu.style.visibility = "visible";
+		mobileMenu.style.opacity = "1";
+		
+		
 		mobileMenu.classList.remove("mobile-menu-closed");
 		mobileMenu.classList.add("mobile-menu-opened");
+		
 		mobileMenuButton.classList.add("mobile-nav-btn-active");
+		//Без !important стиль не задается
+		mobileMenuButton.style.top = "20px";
 		mobileMenuButtonActive = true;
 		
 		$("#about-me-id").stop().animate({ 
