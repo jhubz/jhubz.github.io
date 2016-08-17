@@ -546,8 +546,7 @@ h3 {
 	transition: 0.4s all;
 }
 
-.feedback input[type="submit"]:hover,
-.feedback input[type="submit"]:focus {
+.feedback input[type="submit"]:hover {
 	background: #fff;
 	color: #128d58;
 	box-shadow: inset 0 0 0px 3px #128d58;
@@ -566,7 +565,7 @@ h3 {
 }
 
 .alert-success {
-    color: #1ac27a;
+    color: #128d58;
 }
 
 .alert-error {
