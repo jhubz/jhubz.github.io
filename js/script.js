@@ -7,6 +7,8 @@ var mobileMenuButtonActive = false;
 var mobileMenu = document.querySelector(".site-navigation .mobile-menu");
 var mobileMenuItemCopy = document.querySelector(".mobile-menu-item-copy");
 
+var aboutMe = document.querySelector(".about-me");
+
 //КНОПКА ВОЗВРАТА НАВЕРХ
 var upButton = document.querySelector("body .up-button");
 var upButtonLink = document.querySelector("body .up-button a");
@@ -43,17 +45,20 @@ mobileMenuButton.addEventListener("click", function (event) {
 		
 		/*mobileMenu.classList.remove("mobile-menu-show");*/
 		//Без !important стили не задаются
-		mobileMenu.style.visibility = "hidden";
-		mobileMenu.style.opacity = "0";
+		mobileMenu.style.display = "none";
 		
 		mobileMenuButton.classList.remove("mobile-nav-btn-active");
 		//Без !important стиль не задается
 		mobileMenuButton.style.top = "0";
 		mobileMenuButtonActive = false;
 		
+		/*
 		$("#about-me-id").stop().animate({ 
 			paddingTop: 0
 		}, 600, "swing");
+		*/
+		
+		aboutMe.style.paddingTop = "0";
 
 	}
 	
@@ -63,8 +68,7 @@ mobileMenuButton.addEventListener("click", function (event) {
 	{
 		/*mobileMenu.classList.add("mobile-menu-show");*/
 		//Без !important стили не задаются
-		mobileMenu.style.visibility = "visible";
-		mobileMenu.style.opacity = "1";
+		mobileMenu.style.display = "block";
 		
 		
 		mobileMenu.classList.remove("mobile-menu-closed");
@@ -75,10 +79,15 @@ mobileMenuButton.addEventListener("click", function (event) {
 		mobileMenuButton.style.top = "20px";
 		mobileMenuButtonActive = true;
 		
+		/*
 		$("#about-me-id").stop().animate({ 
 			paddingTop: topMenuHeight - topHeaderHeight +10
 		}, 600, "swing");
-
+		*/
+		
+		var currentTopMenuHeight = topMenu.outerHeight();
+		aboutMe.style.paddingTop = currentTopMenuHeight - topHeaderHeight * 0.8 + "px";
+		
 	}
 });
 

@@ -1,3 +1,4 @@
+/*
 @-webkit-keyframes menu-opened {
 
 	0% {
@@ -53,6 +54,7 @@
 	}
 							
 }
+*/
 
 @-webkit-keyframes appear {
 
@@ -141,29 +143,30 @@ h3 {
 }
 
 .mobile-menu-opened {
+	/*
 	-webkit-animation: menu-opened 0.6s ease-in-out;
 				 animation: menu-opened 0.6s ease-in-out;
+	*/
 }
 
 .mobile-menu-closed {
+	/*
 	-webkit-animation: menu-closed 0.6s ease-in-out;
 				 animation: menu-closed 0.6s ease-in-out;
+	*/
 }
+
 /*
 .mobile-menu-show {
 	visibility: visible !important;
 	opacity: 1 !important;
 }
 */
+
 .mobile-nav-btn-active {
 	position: absolute;
-	/*top: 20px !important;*/
 	
 	box-shadow: 0 0 5px 2px #1ac27a;
-	
-	-webkit-transition: all 0.6s;
-	
-	transition: all 0.6s;
 }
 
 /*----------------------------SITE-HEADER--------------------------------*/
@@ -189,10 +192,6 @@ h3 {
 	
 	color: #fff;
 	cursor: pointer;
-	
-	-webkit-transition: all 0.6s;
-	
-	transition: all 0.6s;
 }
 
 .site-header .mobile-nav-btn::before {
@@ -252,7 +251,8 @@ h3 {
 	transition: all 0.4s;
 }
 
-.site-navigation li a:hover {
+.site-navigation li a:hover,
+.site-navigation li a:focus {
 	color: #4d9878;
 }
 
@@ -399,7 +399,8 @@ h3 {
 	transition: all 0.4s;
 }
 
-.my-works a:hover .image-container {
+.my-works a:hover .image-container,
+.my-works a:focus .image-container {
 	box-shadow: 0px 0px 30px 3px #128d58;
 }
 
@@ -546,10 +547,9 @@ h3 {
 	transition: 0.4s all;
 }
 
-.feedback input[type="submit"]:hover {
-	background: #fff;
-	color: #128d58;
-	box-shadow: inset 0 0 0px 3px #128d58;
+.feedback input[type="submit"]:hover,
+.feedback input[type="submit"]:focus {
+	box-shadow: 0 0 0px 2px #000;
 }
 
 .alert {
@@ -618,7 +618,8 @@ h3 {
 	transition: 0.4s all;
 }
 
-.social-btn a:hover {
+.social-btn a:hover,
+.social-btn a:focus {
 	box-shadow: inset 0 0 0 3px #fff;
 }
 
@@ -788,8 +789,6 @@ h3 {
 		opacity: 1;
 	}
 	
-	/*---------------Удаление анимации из моих работ------------------*/
-	
 	.my-works a .image-container {
 		box-shadow: 0px 0px 10px 5px #666;
 	}
@@ -822,9 +821,6 @@ h3 {
 		margin: 10px 20px;
 		padding: 5px;
 	}
-	
-	/*-------------------------------------------------------------------------------*/
-	
 	
 	
 	
@@ -885,15 +881,10 @@ h3 {
 		top: 20%;
 		left: 0;
 		
+		display: none;
 		width: 100%;
 		
 		background: #000;
-		visibility: hidden;
-		opacity: 0;
-		
-		-webkit-transition: 0.4s;
-		
-		transition: 0.4s;
 	}
 
 	.mobile-menu li {
@@ -922,7 +913,6 @@ h3 {
 		width: 85%;
 		margin: 0 auto;
 		margin-bottom: 40px;
-		/*flex-basis: 85%;*/
 		
 		margin-bottom: 7%;
 	}
@@ -944,7 +934,6 @@ h3 {
 		width: 85%;
 		margin: 0 auto;
 		margin-bottom: 40px;
-		/*flex-basis: 85%;*/
 		
 		margin-bottom: 15%;
 	}
