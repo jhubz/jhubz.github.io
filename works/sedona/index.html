@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Седона</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.min.css">
+
+    <script>
+      document.createElement( "picture" );
+    </script>
+    <script src="js/picturefill.min.js" async></script>
+
+  </head>
+
+  <body>
+    <div class="page-container">
+
+      <header class="page-header">
+
+        <nav class="main-nav main-nav--opened">
+          <ul class="main-nav__list">
+            <li class="main-nav__item  main-nav__item--current"><a class="main-nav__link  main-nav__link--current">Главная</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="photo.html">Фото и видео</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="form.html">Форма отзыва</a></li>
+            <li class="main-nav__item"><a class="main-nav__link  main-nav__link--last" href="https://htmlacademy.ru/">Html academy</a></li>
+          </ul>
+        </nav>
+
+        <div class="page-header__nav-controls">
+          <button class="page-header__nav-toggle  page-header__nav-toggle--close" type="button">Открыть меню</button>
+        </div>
+
+        <div class="page-header__logo  page-header__logo--opened-menu">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/icons/logo-sedona-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/icons/logo-sedona-tablet.svg">
+            <img src="img/icons/logo-sedona-mobile.svg" alt="Логотип Седоны" width="102" height="84">
+          </picture>
+        </div>
+
+        <div class="page-header__photo">
+        </div>
+      </header>
+
+      <div class="content-header">
+        <h2 class="content-header__title">Седона &ndash; небольшой городок в Аризоне, заслуживающий большего!</h2>
+        <p class="content-header__description">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+      </div>
+
+      <section class="hotel-features">
+
+        <div class="hotel-features__list">
+          <div class="hotel-feature">
+
+            <div class="hotel-feature__text  hotel-feature__text--photo hotel-feature__text--left">
+              <h3 class="hotel-feature__name">Настоящий городок</h3>
+              <div class="hotel-feature__number">&ndash; №1 &ndash;</div>
+              <p class="hotel-feature__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
+            </div>
+
+            <div class="hotel-feature__photo-container">
+              <div class="hotel-feature__photo  hotel-feature__photo--right">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/photo-city@1x.jpg 1x, img/photo-city@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/photo-city-tablet@1x.jpg 1x, img/photo-city-tablet@2x.jpg 2x">
+                  <img src="img/photo-city-mobile@1x.jpg" srcset="img/photo-city-mobile@1x.jpg 1x, img/photo-city-mobile@2x.jpg 2x" alt="Городок Седона">
+                </picture>
+              </div>
+            </div>
+
+            <ul class="hotel-services">
+              <li class="hotel-services__item  hotel-services__item--housing">
+                <h3 class="hotel-services__name">Жилье</h3>
+                <p class="hotel-services__description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+              </li>
+
+              <li class="hotel-services__item  hotel-services__item--souvenirs">
+                <h3 class="hotel-services__name">Сувениры</h3>
+                <p class="hotel-services__description">Не только&nbsp;китайского, но&nbsp;и местного производства!</p>
+              </li>
+
+              <li class="hotel-services__item  hotel-services__item--food">
+                <h3 class="hotel-services__name">Еда</h3>
+                <p class="hotel-services__description">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="hotel-feature">
+            <div class="hotel-feature__text  hotel-feature__text--photo hotel-feature__text--right">
+              <h3 class="hotel-feature__name  hotel-feature__name--photo">Там&nbsp;есть мост&nbsp;дьявола</h3>
+              <div class="hotel-feature__number">&ndash; №2 &ndash;</div>
+              <p class="hotel-feature__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+            </div>
+
+            <div class="hotel-feature__photo-container">
+              <div class="hotel-feature__photo  hotel-feature__photo--left">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/photo-bridge@1x.jpg 1x, img/photo-bridge@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
+                  <img src="img/photo-bridge-mobile@1x.jpg" srcset="img/photo-bridge-mobile@1x.jpg 1x, img/photo-bridge-mobile@2x.jpg 2x" alt="Мост дьявола">
+                </picture>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="hotel-feature">
+            <div class="hotel-feature__text  hotel-feature__text--square">
+              <h3 class="hotel-feature__name">Небольшая площадь</h3>
+              <div class="hotel-feature__number">&ndash; №3 &ndash;</div>
+              <p class="hotel-feature__description">Все&nbsp;достопримеча&shy;тельности находятся очень&nbsp;близко</p>
+            </div>
+          </div>
+
+          <div class="hotel-feature">
+            <div class="hotel-feature__text  hotel-feature__text--road">
+              <h3 class="hotel-feature__name">Красивая дорога</h3>
+              <div class="hotel-feature__number">&ndash; №4 &ndash;</div>
+              <p class="hotel-feature__description">Ехать в Седону из Лас-вегаса совсем не скучно!</p>
+            </div>
+          </div>
+
+          <div class="hotel-feature">
+            <div class="hotel-feature__text">
+              <h3 class="hotel-feature__name">Мало туристов</h3>
+              <div class="hotel-feature__number">&ndash; №5 &ndash;</div>
+              <p class="hotel-feature__description">Большинство еде в Гранд Каньон и толпится там</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="hotel-offer">
+        <h2 class="hotel-offer__title">Заинтересовались?</h2>
+        <p class="hotel-offer__description">Укажите предполагаемые даты поездки, и&nbsp;мы&nbsp;покажем&nbsp;вам&nbsp;лучшие предложения гостиниц в Седоне</p>
+        <a class="hotel-offer__find" href="#">Найти гостиницу</a>
+      </section>
+
+      <div class="hotel-map">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.jpg 1x, img/bg-map-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.jpg 1x, img/bg-map-tablet@2x.jpg 2x">
+          <img src="img/bg-map-mobile@1x.jpg" srcset="img/bg-map-mobile@1x.jpg 1x, img/bg-map-mobile@2x.jpg 2x" alt="Карта Седоны">
+        </picture>
+      </div>
+
+      <footer class="page-footer">
+        <p class="page-footer__hashtag">#VisitSedona</p>
+
+        <ul class="social-links">
+
+          <li class="social-links__item">
+            <a class="social-link  social-link--tw" href="https://tweeter.com/htmlacademy">
+              <svg class="social-link__icon" x="0px" y="0px" width="17.5px" height="14.663px" viewBox="0 0 17.5 14.663" enable-background="new 0 0 17.5 14.663" xml:space="preserve">
+                <use xlink:href="img/symbols.svg#icon-twitter" />
+              </svg>
+            </a>
+          </li>
+
+          <li class="social-links__item">
+            <a class="social-link  social-link--fb" href="https://facebook.com/htmlacademy">
+              <svg class="social-link__icon" x="0px" y="0px" width="8.672px" height="18.944px" viewBox="0 0 8.672 18.944" enable-background="new 0 0 8.672 18.944" xml:space="preserve">
+                <use xlink:href="img/symbols.svg#icon-facebook" />
+              </svg>
+            </a>
+          </li>
+
+          <li class="social-links__item">
+            <a class="social-link  social-link--yt" href="https://youtube.com/htmlacademy">
+              <svg class="social-link__icon" x="0px" y="0px" width="19.979px" height="14.015px" viewBox="0 0 19.979 14.015" enable-background="new 0 0 19.979 14.015" xml:space="preserve">
+                <use xlink:href="img/symbols.svg#icon-youtube" />
+              </svg>
+            </a>
+          </li>
+
+        </ul>
+
+        <p class="page-footer__copyright">Разработано
+          <a class="page-footer__link-htmlacademy" href="http://htmlacademy.ru">
+            <svg class="page-footer__icon-htmlacademy" width="40px" height="40px" viewBox="0 0 60 60">
+              <use xlink:href="img/symbols.svg#htmlacademy" />
+            </svg>
+          </a>
+        </p>
+      </footer>
+
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/svg4everybody.min.js"></script>
+    <script>svg4everybody();</script>
+
+  </body>
+</html>

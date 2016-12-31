@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Седона</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.min.css">
+
+    <script>
+      document.createElement( "picture" );
+    </script>
+    <script src="js/picturefill.min.js" async></script>
+
+  </head>
+
+  <body>
+    <div class="page-container">
+
+      <header class="page-header">
+
+        <nav class="main-nav main-nav--opened">
+          <ul class="main-nav__list">
+            <li class="main-nav__item"><a class="main-nav__link" href="index.html">Главная</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="photo.html">Фото и видео</a></li>
+            <li class="main-nav__item  main-nav__item--current"><a class="main-nav__link  main-nav__link--current">Форма отзыва</a></li>
+            <li class="main-nav__item"><a class="main-nav__link  main-nav__link--last" href="https://htmlacademy.ru/">Html academy</a></li>
+          </ul>
+        </nav>
+
+        <div class="page-header__nav-controls">
+          <button class="page-header__nav-toggle  page-header__nav-toggle--close" type="button">Открыть меню</button>
+        </div>
+
+        <div class="page-header__logo  page-header__logo--opened-menu">
+          <a href="index.html">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/icons/logo-sedona-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/icons/logo-sedona-tablet.svg">
+              <img src="img/icons/logo-sedona-mobile.svg" alt="Логотип Седоны" width="102" height="84">
+            </picture>
+          </a>
+        </div>
+
+        <div class="page-header__photo-inner">
+        </div>
+      </header>
+
+      <div class="content-header  content-header--inner  content-header--inner-form">
+        <h2 class="content-header__title  content-header__title--inner">Оставьте свой отзыв</h2>
+        <p class="content-header__description  content-header__description--inner">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+      </div>
+
+      <section class="hotel-review">
+
+        <form class="hotel-review-form" action="#" method="post">
+          <div class="hotel-review-form__container  hotel-review-form__container--name">
+            <h3 class="hotel-review-form__title  hotel-review-form__title--name">Представьтесь:</h3>
+
+            <div class="hotel-review-form__field-container  hotel-review-form__field-container--name">
+              <label class="hotel-review-form__text-field-label" for="name-id">Имя*:</label>
+              <input class="hotel-review-form__text-field" id="name-id" type="text" name="name" placeholder="Петр">
+            </div>
+
+            <div class="hotel-review-form__field-container  hotel-review-form__field-container--name">
+              <label class="hotel-review-form__text-field-label" for="surname-id">Фамилия*:</label>
+              <input class="hotel-review-form__text-field" id="surname-id" type="text" name="surname" placeholder="Иванов">
+            </div>
+
+            <div class="hotel-review-form__field-container  hotel-review-form__field-container--name">
+              <label class="hotel-review-form__text-field-label" for="patronymic-id">Отчество:</label>
+              <input class="hotel-review-form__text-field" id="patronymic-id" type="text" name="patronymic"  placeholder="Александрович">
+            </div>
+          </div>
+
+          <div class="hotel-review-form__container  hotel-review-form__container--contacts">
+            <h3 class="hotel-review-form__title  hotel-review-form__title--contacts">Контактная информация:</h3>
+
+            <div class="hotel-review-form__field-container  hotel-review-form__field-container--phone">
+              <label class="hotel-review-form__text-field-label  hotel-review-form__text-field-label--phone" for="phone-id"><span class="desktop-hidden">Контактный </span>телефон*:</label>
+              <input class="hotel-review-form__text-field  hotel-review-form__text-field--phone" id="phone-id" type="tel" name="phone" placeholder="Введите телефон">
+              <div class="hotel-review-form__phone-error">Ошибка, перепроверьте номер</div>
+            </div>
+
+
+            <div class="hotel-review-form__field-container  hotel-review-form__field-container--email">
+              <label class="hotel-review-form__text-field-label  hotel-review-form__text-field-label--email" for="email-id">Электронная почта*:</label>
+              <input class="hotel-review-form__text-field    hotel-review-form__text-field--email" id="email-id" type="email" name="email" placeholder="Введите e-mail">
+            </div>
+          </div>
+
+          <div class="hotel-review-form__container   hotel-review-form__container--impression">
+            <h3 class="hotel-review-form__title  hotel-review-form__title--impression">Ваше общее впечатление:</h3>
+
+            <div class="hotel-review-form__field-container  hotel-review-form__field-container--radio">
+              <input class="hotel-review-form__radio" id="impression-good-id" type="radio" name="impression" value="Скорее положительное" checked>
+              <label class="hotel-review-form__radio-label" for="impression-good-id">
+                Скорее положительное
+              </label>
+            </div>
+
+            <div class="hotel-review-form__field-container  hotel-review-form__field-container--radio">
+              <input class="hotel-review-form__radio" id="impression-bad-id" type="radio" name="impression" value="Скорее отрицательное">
+              <label class="hotel-review-form__radio-label" for="impression-bad-id">
+                Скорее отрицательное
+              </label>
+            </div>
+
+            <div class="hotel-review-form__field-container  hotel-review-form__field-container--radio">
+              <input class="hotel-review-form__radio" id="impression-difficult-id" type="radio" name="impression" value="Затрудняюсь ответить">
+              <label class="hotel-review-form__radio-label" for="impression-difficult-id">
+                Затрудняюсь ответить
+              </label>
+            </div>
+          </div>
+
+          <div class="hotel-review-form__container  hotel-review-form__container--attraction">
+            <h3 class="hotel-review-form__title  hotel-review-form__title--attraction">Посещенные достопримечательности:</h3>
+
+            <div class="hotel-review-form__field-container  hotel-review-form__field-container--checkbox">
+              <input class="hotel-review-form__checkbox" id="attraction-devilBridge-id" type="checkbox" name="attraction" value="Мост Дьявола" checked>
+              <label class="hotel-review-form__checkbox-label" for="attraction-devilBridge-id">
+                Мост Дьявола
+              </label>
+            </div>
+
+            <div class="hotel-review-form__field-container  hotel-review-form__field-container--checkbox">
+              <input class="hotel-review-form__checkbox" id="attraction-slidePark-id" type="checkbox" name="attraction" value="Слайд-парк" checked>
+              <label class="hotel-review-form__checkbox-label" for="attraction-slidePark-id">
+                Слайд-парк
+              </label>
+            </div>
+
+            <div class="hotel-review-form__field-container  hotel-review-form__field-container--checkbox">
+              <input class="hotel-review-form__checkbox" id="attraction-bellMountain-id" type="checkbox" name="attraction" value="Гора-Колокол">
+              <label class="hotel-review-form__checkbox-label" for="attraction-bellMountain-id">
+                Гора-Колокол
+              </label>
+            </div>
+
+            <div class="hotel-review-form__field-container  hotel-review-form__field-container--checkbox">
+              <input class="hotel-review-form__checkbox" id="attraction-redRocks-id" type="checkbox" name="attraction" value="Красные скалы" checked>
+              <label class="hotel-review-form__checkbox-label" for="attraction-redRocks-id">
+                Красные скалы
+              </label>
+            </div>
+          </div>
+
+          <div class="hotel-review-form__container  hotel-review-form__container--emotions">
+            <h3 class="hotel-review-form__title  hotel-review-form__title--emotions">Опишите свои эмоции:</h3>
+            <div class="hotel-review-form__field-container">
+              <textarea class="hotel-review-form__comment" id="emotions-id" name="emotions" rows=8 placeholder="Опишите подробно все свои восторги"></textarea>
+            </div>
+          </div>
+
+          <input class="hotel-review-form__submit" type="submit" value="Отправить отзыв">
+          <span class="hotel-review-form__footnote">* &ndash; Обязательные поля</span>
+        </form>
+      </section>
+
+      <footer class="page-footer">
+        <p class="page-footer__hashtag">#VisitSedona</p>
+
+        <ul class="social-links">
+
+          <li class="social-links__item">
+            <a class="social-link  social-link--tw" href="https://tweeter.com/htmlacademy">
+              <svg class="social-link__icon" x="0px" y="0px" width="17.5px" height="14.663px" viewBox="0 0 17.5 14.663" enable-background="new 0 0 17.5 14.663" xml:space="preserve">
+                <use xlink:href="img/symbols.svg#icon-twitter" />
+              </svg>
+            </a>
+          </li>
+
+          <li class="social-links__item">
+            <a class="social-link  social-link--fb" href="https://facebook.com/htmlacademy">
+              <svg class="social-link__icon" x="0px" y="0px" width="8.672px" height="18.944px" viewBox="0 0 8.672 18.944" enable-background="new 0 0 8.672 18.944" xml:space="preserve">
+                <use xlink:href="img/symbols.svg#icon-facebook" />
+              </svg>
+            </a>
+          </li>
+
+          <li class="social-links__item">
+            <a class="social-link  social-link--yt" href="https://youtube.com/htmlacademy">
+              <svg class="social-link__icon" x="0px" y="0px" width="19.979px" height="14.015px" viewBox="0 0 19.979 14.015" enable-background="new 0 0 19.979 14.015" xml:space="preserve">
+                <use xlink:href="img/symbols.svg#icon-youtube" />
+              </svg>
+            </a>
+          </li>
+
+        </ul>
+
+        <p class="page-footer__copyright">Разработано
+          <a class="page-footer__link-htmlacademy" href="http://htmlacademy.ru">
+            <svg class="page-footer__icon-htmlacademy" width="40px" height="40px" viewBox="0 0 60 60">
+              <use xlink:href="img/symbols.svg#htmlacademy" />
+            </svg>
+          </a>
+        </p>
+
+      </footer>
+
+      <div class="popup popup--success">
+        <h3 class="popup__title  popup__title--success">Ваш отзыв отправлен!</h3>
+        <p class="popup__text  popup__text--success">
+          Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.
+        </p>
+        <div class="popup__button-container">
+          <button class="popup__button  popup__button--success">Закрыть окно</button>
+        </div>
+      </div>
+
+      <div class="popup popup--failure">
+        <h3 class="popup__title  popup__title--failure">Что-то пошло не так!</h3>
+        <p class="popup__text  popup__text--failure">
+          Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
+        </p>
+        <button class="popup__button">Ок</button>
+      </div>
+
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/svg4everybody.min.js"></script>
+    <script>svg4everybody();</script>
+
+  </body>
+</html>
